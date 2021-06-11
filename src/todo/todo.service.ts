@@ -24,4 +24,9 @@ export class TodoService {
         }
         return { ...task };
     }
+
+    deleteTask(singleTaskId: string) {
+        const index = this.getSingleTask(singleTaskId)[1];
+        this.todoTasks.splice(index,1);
+    }
 }
